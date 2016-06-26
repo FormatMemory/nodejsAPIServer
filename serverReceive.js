@@ -17,7 +17,7 @@ var server = http.createServer( function(request, response){
     var requestContent = 1;
     console.log('['+request.method +']Coming request: '+  body); 
     response.write(body);
-
+    /*  var result;
      if (result) {
           response.writeHead(200, { 'Content-Type': 'application/json' })
           response.end(JSON.stringify(result))
@@ -25,6 +25,8 @@ var server = http.createServer( function(request, response){
         response.writeHead(404)
         response.end();
       }
+      */
+    response.end();
   });
   request.on('error', function(err){
     console.log('Problem with request: ' + err.message);
